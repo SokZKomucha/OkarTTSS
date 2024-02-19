@@ -1,7 +1,6 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.ts",
   module: {
     rules: [{
       test: /\.ts?$/,
@@ -9,7 +8,8 @@ module.exports = {
       exclude: /node_modules/
     }]
   },
-  resolve: { extensions: [".tsx", ".ts", ".js"] },
+  entry: "./src/index.ts",
+  resolve: { extensions: [".ts", ".js"] },
   context: __dirname,
   output: {
     filename: "script.js",
